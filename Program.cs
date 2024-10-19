@@ -13,4 +13,4 @@ LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring
  string input = Console.ReadLine();
 
  int result = lengthOfLongestSubstring.FindLengthOfLongestSubstring(input);
- Console.WriteLine($"Length of Longest Substring : {result}");
+ Console.WriteLine($"Length of Longest Substring in the text {input} : {result}");
