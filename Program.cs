@@ -1,16 +1,27 @@
 ﻿using System;
 using CodeChallenge;
-
+///Q1-Meadian Of Two sorted Arrays
 // int[] nums1 = { 1, 3, 7 };
 // int[] nums2 = { 2 ,9,10};
 // MedianOfTwoSortedArrays medianOfTwoSortedArrays = new MedianOfTwoSortedArrays();
 // double median = medianOfTwoSortedArrays.FindMedianSortedArrays(nums1, nums2);
 // Console.WriteLine($"The median is: {median}");
 
-LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
- 
- Console.WriteLine("Enter a text to find the longest substring in it");
- string input = Console.ReadLine();
 
- int result = lengthOfLongestSubstring.FindLengthOfLongestSubstring(input);
- Console.WriteLine($"Length of Longest Substring in the text {input} : {result}");
+///Q2- Length of Longest SubString
+// LengthOfLongestSubstring lengthOfLongestSubstring = new LengthOfLongestSubstring();
+ 
+//  Console.WriteLine("Enter a text to find the longest substring in it");
+//  string input = Console.ReadLine();
+
+//  int result = lengthOfLongestSubstring.FindLengthOfLongestSubstring(input);
+//  Console.WriteLine($"Length of Longest Substring in the text {input} : {result}");
+
+
+///Q3- Longest Paindrome
+ LongestPalindrome longestPalindrome = new LongestPalindrome();
+
+ Console.WriteLine("Please enter a string:");
+string input = Console.ReadLine();
+string result = longestPalindrome.FindLongestPalindrome(input);
+Console.WriteLine("The longest palindromic substring is: " + result);
