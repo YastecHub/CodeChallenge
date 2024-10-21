@@ -18,10 +18,23 @@ using CodeChallenge;
 //  Console.WriteLine($"Length of Longest Substring in the text {input} : {result}");
 
 
-///Q3- Longest Paindrome
- LongestPalindrome longestPalindrome = new LongestPalindrome();
+// ///Q3- Longest Paindrome
+//  LongestPalindrome longestPalindrome = new LongestPalindrome();
 
- Console.WriteLine("Please enter a string:");
+//  Console.WriteLine("Please enter a string:");
+// string input = Console.ReadLine();
+// string result = longestPalindrome.FindLongestPalindrome(input);
+// Console.WriteLine("The longest palindromic substring is: " + result);
+
+
+ZigZagConversion zigZagConversion = new ZigZagConversion();
+Console.WriteLine("Enter the string to convert in ZigZag pattern");
 string input = Console.ReadLine();
-string result = longestPalindrome.FindLongestPalindrome(input);
-Console.WriteLine("The longest palindromic substring is: " + result);
+
+Console.WriteLine("Enter the Number of rows:");
+int rowInput = int.Parse(Console.ReadLine());   
+
+string result = zigZagConversion.Convert(input, rowInput);
+
+Console.WriteLine($"\nString Inputed: {input}");
+Console.WriteLine($"ZigZag Conversion with {rowInput} rows: {result}");
