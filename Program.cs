@@ -26,15 +26,23 @@ using CodeChallenge;
 // string result = longestPalindrome.FindLongestPalindrome(input);
 // Console.WriteLine("The longest palindromic substring is: " + result);
 
+// ///Q4- ZigZagConversion
+// ZigZagConversion zigZagConversion = new ZigZagConversion();
+// Console.WriteLine("Enter the string to convert in ZigZag pattern");
+// string input = Console.ReadLine();
 
-ZigZagConversion zigZagConversion = new ZigZagConversion();
-Console.WriteLine("Enter the string to convert in ZigZag pattern");
-string input = Console.ReadLine();
+// Console.WriteLine("Enter the Number of rows:");
+// int rowInput = int.Parse(Console.ReadLine());   
 
-Console.WriteLine("Enter the Number of rows:");
-int rowInput = int.Parse(Console.ReadLine());   
+// string result = zigZagConversion.Convert(input, rowInput);
 
-string result = zigZagConversion.Convert(input, rowInput);
+// Console.WriteLine($"\nString Inputed: {input}");
+// Console.WriteLine($"ZigZag Conversion with {rowInput} rows: {result}");
 
-Console.WriteLine($"\nString Inputed: {input}");
-Console.WriteLine($"ZigZag Conversion with {rowInput} rows: {result}");
+///Q5- Reversing of Interger number
+ReverseInteger reverseInteger = new ReverseInteger();
+Console.WriteLine("Please enter an integer to be reversed:");
+int userInput = int.Parse(Console.ReadLine());
+
+int result = reverseInteger.ReversingOfInteger(userInput);
+Console.WriteLine($"Reversed Interger: {result}");
