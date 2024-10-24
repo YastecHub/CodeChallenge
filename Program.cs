@@ -42,11 +42,27 @@ using CodeChallenge;
 // int result = reverseInteger.ReversingOfInteger(userInput);
 // Console.WriteLine($"Reversed Interger: {result}");
 
-////Q6- Converting String Input to Interger
-ConvertStringToInteger convertStringToInteger = new ConvertStringToInteger();
-Console.WriteLine("Please enter the the string needed to be converted to interger");
-string userInputed = Console.ReadLine();
+// ////Q6- Converting String Input to Interger
+// ConvertStringToInteger convertStringToInteger = new ConvertStringToInteger();
+// Console.WriteLine("Please enter the the string needed to be converted to interger");
+// string userInputed = Console.ReadLine();
 
 
-int result = convertStringToInteger.ConvertingStringToInteger(userInputed);
-Console.WriteLine($"The Converted integer is: {result}");
+// int result = convertStringToInteger.ConvertingStringToInteger(userInputed);
+// Console.WriteLine($"The Converted integer is: {result}");
+
+
+PalindromeNumber palindromeNumber = new PalindromeNumber();
+Console.WriteLine("Enter a number to check if it's a palindrome:");
+int number = int.Parse(Console.ReadLine());
+
+bool resultOfPalindrome = palindromeNumber.IsPalindrome(number);
+
+if (resultOfPalindrome)
+{
+    Console.WriteLine($"{number} is a palindrome!");
+}
+else
+{
+    Console.WriteLine($"{number} is not a palindrome.");
+}
