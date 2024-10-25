@@ -46,23 +46,33 @@ using CodeChallenge;
 // ConvertStringToInteger convertStringToInteger = new ConvertStringToInteger();
 // Console.WriteLine("Please enter the the string needed to be converted to interger");
 // string userInputed = Console.ReadLine();
-
-
 // int result = convertStringToInteger.ConvertingStringToInteger(userInputed);
 // Console.WriteLine($"The Converted integer is: {result}");
 
+////Q7 Palindrome Of Numbers
+// PalindromeNumber palindromeNumber = new PalindromeNumber();
+// Console.WriteLine("Enter a number to check if it's a palindrome:");
+// int number = int.Parse(Console.ReadLine());
+// bool resultOfPalindrome = palindromeNumber.IsPalindrome(number);
+// if (resultOfPalindrome)
+// {
+//     Console.WriteLine($"{number} is a palindrome!");
+// }
+// else
+// {
+//     Console.WriteLine($"{number} is not a palindrome.");
+// }
 
-PalindromeNumber palindromeNumber = new PalindromeNumber();
-Console.WriteLine("Enter a number to check if it's a palindrome:");
-int number = int.Parse(Console.ReadLine());
 
-bool resultOfPalindrome = palindromeNumber.IsPalindrome(number);
+///Q8--Regular Expression Matching
+Console.WriteLine("Enter the input string:");
+string input = Console.ReadLine();
 
-if (resultOfPalindrome)
-{
-    Console.WriteLine($"{number} is a palindrome!");
-}
-else
-{
-    Console.WriteLine($"{number} is not a palindrome.");
-}
+Console.WriteLine("Enter the pattern:");
+string pattern = Console.ReadLine();
+
+RegularExpressionMatching regexxMatcher = new RegularExpressionMatching();
+
+bool IsMatch = regexxMatcher.IsMatch(input, pattern);
+
+Console.WriteLine($"Does the input match the pattern? {IsMatch}");
