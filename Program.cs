@@ -64,15 +64,25 @@ using CodeChallenge;
 // }
 
 
-///Q8--Regular Expression Matching
-Console.WriteLine("Enter the input string:");
+// ///Q8--Regular Expression Matching
+// Console.WriteLine("Enter the input string:");
+// string input = Console.ReadLine();
+// Console.WriteLine("Enter the pattern:");
+// string pattern = Console.ReadLine();
+// RegularExpressionMatching regexxMatcher = new RegularExpressionMatching();
+// bool IsMatch = regexxMatcher.IsMatch(input, pattern);
+// Console.WriteLine($"Does the input match the pattern? {IsMatch}");
+
+
+////Q9-- Finding Container With Most Water
+
+Console.WriteLine("Please Enter the container Heights separated by spaces");
+
 string input = Console.ReadLine();
 
-Console.WriteLine("Enter the pattern:");
-string pattern = Console.ReadLine();
+int[] height = Array.ConvertAll(input.Split(), int.Parse);
 
-RegularExpressionMatching regexxMatcher = new RegularExpressionMatching();
+ContainerWithMostWater containerWithMostWater= new ContainerWithMostWater();
+int maxWaterArea = containerWithMostWater.FindMaxArea(height);
 
-bool IsMatch = regexxMatcher.IsMatch(input, pattern);
-
-Console.WriteLine($"Does the input match the pattern? {IsMatch}");
+Console.WriteLine($"The Maximum area of water the container can hold is: {maxWaterArea}");
