@@ -74,15 +74,21 @@ using CodeChallenge;
 // Console.WriteLine($"Does the input match the pattern? {IsMatch}");
 
 
-////Q9-- Finding Container With Most Water
+// ////Q9-- Finding Container With Most Water
+// Console.WriteLine("Please Enter the container Heights separated by spaces");
+// string input = Console.ReadLine();
+// int[] height = Array.ConvertAll(input.Split(), int.Parse);
+// ContainerWithMostWater containerWithMostWater= new ContainerWithMostWater();
+// int maxWaterArea = containerWithMostWater.FindMaxArea(height);
+// Console.WriteLine($"The Maximum area of water the container can hold is: {maxWaterArea}");
 
-Console.WriteLine("Please Enter the container Heights separated by spaces");
 
-string input = Console.ReadLine();
+//// Q10 Converting Integer to Roman Numerals
+Console.WriteLine("Please Enter the Number to be converted to its Roman Numerals");
+int num = int.Parse(Console.ReadLine());
 
-int[] height = Array.ConvertAll(input.Split(), int.Parse);
+ConvertIntegerToRoman convertIntegerToRoman = new ConvertIntegerToRoman();
 
-ContainerWithMostWater containerWithMostWater= new ContainerWithMostWater();
-int maxWaterArea = containerWithMostWater.FindMaxArea(height);
+string romanNumeral = convertIntegerToRoman.IntToRoman(num);
+Console.WriteLine($"The Roman numeral for {num} is: {romanNumeral}");
 
-Console.WriteLine($"The Maximum area of water the container can hold is: {maxWaterArea}");
