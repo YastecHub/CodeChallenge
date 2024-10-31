@@ -91,12 +91,10 @@ using CodeChallenge;
 // Console.WriteLine($"The Roman numeral for {num} is: {romanNumeral}");
 
 
-///Q11 Converting Roman Numerals to integer
-Console.WriteLine("Please Enter a Roman numeral to be converted to an integer:");
-string input = Console.ReadLine();
-
-RomanToIntegerConverter romanToIntegerConverter = new RomanToIntegerConverter();
-int result = romanToIntegerConverter.RomanToInt(input.ToUpper());
-
-Console.WriteLine($"The integer value of {input} is: {result}");
+// ///Q11 Converting Roman Numerals to integer
+// Console.WriteLine("Please Enter a Roman numeral to be converted to an integer:");
+// string input = Console.ReadLine();
+// RomanToIntegerConverter romanToIntegerConverter = new RomanToIntegerConverter();
+// int result = romanToIntegerConverter.RomanToInt(input.ToUpper());
+// Console.WriteLine($"The integer value of {input} is: {result}");
 
