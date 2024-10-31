@@ -98,3 +98,13 @@ using CodeChallenge;
 // int result = romanToIntegerConverter.RomanToInt(input.ToUpper());
 // Console.WriteLine($"The integer value of {input} is: {result}");
 
+///Q12-- Finding the common Longest prefix in an array of strings
+Console.WriteLine("Enter the strings separated by commas:");
+string input = Console.ReadLine();
+
+string[] strs = input.Split(',');
+
+LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
+string result = longestCommonPrefix.FindLongestCommonPrefix(strs);
+
+Console.WriteLine($"Longest common prefix is : {result}");
