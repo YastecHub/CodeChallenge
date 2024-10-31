@@ -83,12 +83,20 @@ using CodeChallenge;
 // Console.WriteLine($"The Maximum area of water the container can hold is: {maxWaterArea}");
 
 
-//// Q10 Converting Integer to Roman Numerals
-Console.WriteLine("Please Enter the Number to be converted to its Roman Numerals");
-int num = int.Parse(Console.ReadLine());
+// //// Q10 Converting Integer to Roman Numerals
+// Console.WriteLine("Please Enter the Number to be converted to its Roman Numerals");
+// int num = int.Parse(Console.ReadLine());
+// ConvertIntegerToRoman convertIntegerToRoman = new ConvertIntegerToRoman();
+// string romanNumeral = convertIntegerToRoman.IntToRoman(num);
+// Console.WriteLine($"The Roman numeral for {num} is: {romanNumeral}");
 
-ConvertIntegerToRoman convertIntegerToRoman = new ConvertIntegerToRoman();
 
-string romanNumeral = convertIntegerToRoman.IntToRoman(num);
-Console.WriteLine($"The Roman numeral for {num} is: {romanNumeral}");
+///Q11 Converting Roman Numerals to integer
+Console.WriteLine("Please Enter a Roman numeral to be converted to an integer:");
+string input = Console.ReadLine();
+
+RomanToIntegerConverter romanToIntegerConverter = new RomanToIntegerConverter();
+int result = romanToIntegerConverter.RomanToInt(input.ToUpper());
+
+Console.WriteLine($"The integer value of {input} is: {result}");
 
