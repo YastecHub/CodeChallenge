@@ -105,3 +105,21 @@ using CodeChallenge;
 // LongestCommonPrefix longestCommonPrefix = new LongestCommonPrefix();
 // string result = longestCommonPrefix.FindLongestCommonPrefix(strs);
 // Console.WriteLine($"Longest common prefix is : {result}");
+
+
+
+///Q13--Finding and summing Unique triplet numbers which add up to zero
+Console.WriteLine("Enter Numbers separated by spaces");
+var input = Console.ReadLine();
+
+int[] nums = Array.ConvertAll(input.Split(' '), int.Parse);
+
+var uniqueTripletSumFinder = new UniqueTripletSumFinder();
+
+var result = uniqueTripletSumFinder.ThreeSumFinder(nums);
+
+Console.WriteLine("Triplets that sunm up to zero:");
+foreach (var triplet in result)
+{
+    Console.WriteLine($"[{string.Join(" ", triplet)}]");
+}
