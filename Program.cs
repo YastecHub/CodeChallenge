@@ -107,19 +107,34 @@ using CodeChallenge;
 // Console.WriteLine($"Longest common prefix is : {result}");
 
 
+// ///Q13--Finding and summing Unique triplet numbers which add up to zero
+// Console.WriteLine("Enter Numbers separated by spaces");
+// var input = Console.ReadLine();
 
-///Q13--Finding and summing Unique triplet numbers which add up to zero
-Console.WriteLine("Enter Numbers separated by spaces");
-var input = Console.ReadLine();
+// int[] nums = Array.ConvertAll(input.Split(' '), int.Parse);
 
-int[] nums = Array.ConvertAll(input.Split(' '), int.Parse);
+// var uniqueTripletSumFinder = new UniqueTripletSumFinder();
 
-var uniqueTripletSumFinder = new UniqueTripletSumFinder();
+// var result = uniqueTripletSumFinder.ThreeSumFinder(nums);
 
-var result = uniqueTripletSumFinder.ThreeSumFinder(nums);
+// Console.WriteLine("Triplets that sunm up to zero:");
+// foreach (var triplet in result)
+// {
+//     Console.WriteLine($"[{string.Join(" ", triplet)}]");
+// }
 
-Console.WriteLine("Triplets that sunm up to zero:");
-foreach (var triplet in result)
-{
-    Console.WriteLine($"[{string.Join(" ", triplet)}]");
-}
+///Q14--Finding the sum closest to the target number provided
+///
+Console.WriteLine("Enter numbers separated by commas");
+string input = Console.ReadLine();
+
+int[] nums = Array.ConvertAll(input.Split(','), int.Parse);
+
+Console.WriteLine("Enter the target number");
+int target = int.Parse(Console.ReadLine());
+
+ThreeSumClosestSolver ThreeSumClosestSolver = new ThreeSumClosestSolver();
+
+int closestSum = ThreeSumClosestSolver.ThreeSumClosest(nums, target);
+
+Console.WriteLine($"The sum closest to the target is: {closestSum}");
