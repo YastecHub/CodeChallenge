@@ -123,18 +123,34 @@ using CodeChallenge;
 //     Console.WriteLine($"[{string.Join(" ", triplet)}]");
 // }
 
-///Q14--Finding the sum closest to the target number provided
+// ///Q14--Finding the sum closest to the target number provided
+// ///
+// Console.WriteLine("Enter numbers separated by commas");
+// string input = Console.ReadLine();
+
+// int[] nums = Array.ConvertAll(input.Split(','), int.Parse);
+
+// Console.WriteLine("Enter the target number");
+// int target = int.Parse(Console.ReadLine());
+
+// ThreeSumClosestSolver ThreeSumClosestSolver = new ThreeSumClosestSolver();
+
+// int closestSum = ThreeSumClosestSolver.ThreeSumClosest(nums, target);
+
+// Console.WriteLine($"The sum closest to the target is: {closestSum}");
+
+
+///Q15--Letter combination of phoneNumbers
 ///
-Console.WriteLine("Enter numbers separated by commas");
-string input = Console.ReadLine();
+LetterCombinationsOfPhoneNumber letterCombinationsOfPhoneNumber = new LetterCombinationsOfPhoneNumber();
 
-int[] nums = Array.ConvertAll(input.Split(','), int.Parse);
+Console.WriteLine("Enter digits (from 2 to 9):");
+string inputDigits = Console.ReadLine();
 
-Console.WriteLine("Enter the target number");
-int target = int.Parse(Console.ReadLine());
+IList<string> combinations = letterCombinationsOfPhoneNumber.LetterCombinations(inputDigits);
 
-ThreeSumClosestSolver ThreeSumClosestSolver = new ThreeSumClosestSolver();
-
-int closestSum = ThreeSumClosestSolver.ThreeSumClosest(nums, target);
-
-Console.WriteLine($"The sum closest to the target is: {closestSum}");
+Console.WriteLine("Possible letter combinations:");
+foreach (string combination in combinations)
+{
+    Console.WriteLine(combination);
+}
