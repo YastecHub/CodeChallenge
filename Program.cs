@@ -156,23 +156,50 @@ using CodeChallenge;
 // }
 
 ///Q16--Four sum Order
+ // Collect input for the array from the user
+Console.WriteLine("Enter numbers separated by commas (e.g., 1, 2, 3, 4):");
+string input = Console.ReadLine();
+int[] nums = Array.ConvertAll(input.Split(','), int.Parse);  // Convert input string to an integer array
+
+// Collect input for the target sum from the user
+Console.WriteLine("Enter the target sum:");
+int target = int.Parse(Console.ReadLine());
+
+// Instantiate the FourSumOrderFinder class
+FourSumOrderFinder finder = new FourSumOrderFinder();
+
+// Call the FourSum method
+IList<IList<int>> result = finder.FourSum(nums, target);
+
+// Display the result
+Console.WriteLine("\nQuadruplets that sum up to the target:");
+if (result.Count == 0)
+{
+    Console.WriteLine("No quadruplets found.");
+}
+else
+{
+    foreach (var quadruplet in result)
+{
+    Console.WriteLine("[" + string.Join(", ", quadruplet) + "]");
+}
+}
 
 
+// // ///Q17--Remove Nth Node From End of List
+// //  // Create a sample linked list: [1, 2, 3, 4, 5]
+// //  // Create a sample linked list: [1, 2, 3, 4, 5]
+// ListNode head = LinkedListUtils.CreateLinkedList(new int[] { 1, 2, 3, 4, 5 });
 
-// ///Q17--Remove Nth Node From End of List
-//  // Create a sample linked list: [1, 2, 3, 4, 5]
-//  // Create a sample linked list: [1, 2, 3, 4, 5]
-ListNode head = LinkedListUtils.CreateLinkedList(new int[] { 1, 2, 3, 4, 5 });
+// // Instantiate the class and call the method
+// RemoveNthFromEnd remover = new RemoveNthFromEnd();
+// int n = 2;
 
-// Instantiate the class and call the method
-RemoveNthFromEnd remover = new RemoveNthFromEnd();
-int n = 2;
+// Console.WriteLine("Original Linked List:");
+// LinkedListUtils.PrintLinkedList(head);
 
-Console.WriteLine("Original Linked List:");
-LinkedListUtils.PrintLinkedList(head);
+// // Remove the nth node from the end
+// head = remover.RemovingNthFromEnd(head, n);
 
-// Remove the nth node from the end
-head = remover.RemovingNthFromEnd(head, n);
-
-Console.WriteLine($"\nLinked List after removing {n}th node from the end:");
-LinkedListUtils.PrintLinkedList(head);
+// Console.WriteLine($"\nLinked List after removing {n}th node from the end:");
+// LinkedListUtils.PrintLinkedList(head);
