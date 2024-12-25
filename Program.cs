@@ -142,15 +142,37 @@ using CodeChallenge;
 
 ///Q15--Letter combination of phoneNumbers
 ///
-LetterCombinationsOfPhoneNumber letterCombinationsOfPhoneNumber = new LetterCombinationsOfPhoneNumber();
+// LetterCombinationsOfPhoneNumber letterCombinationsOfPhoneNumber = new LetterCombinationsOfPhoneNumber();
 
-Console.WriteLine("Enter digits (from 2 to 9):");
-string inputDigits = Console.ReadLine();
+// Console.WriteLine("Enter digits (from 2 to 9):");
+// string inputDigits = Console.ReadLine();
 
-IList<string> combinations = letterCombinationsOfPhoneNumber.LetterCombinations(inputDigits);
+// IList<string> combinations = letterCombinationsOfPhoneNumber.LetterCombinations(inputDigits);
 
-Console.WriteLine("Possible letter combinations:");
-foreach (string combination in combinations)
-{
-    Console.WriteLine(combination);
-}
+// Console.WriteLine("Possible letter combinations:");
+// foreach (string combination in combinations)
+// {
+//     Console.WriteLine(combination);
+// }
+
+///Q16--Four sum Order
+
+
+
+// ///Q17--Remove Nth Node From End of List
+//  // Create a sample linked list: [1, 2, 3, 4, 5]
+//  // Create a sample linked list: [1, 2, 3, 4, 5]
+ListNode head = LinkedListUtils.CreateLinkedList(new int[] { 1, 2, 3, 4, 5 });
+
+// Instantiate the class and call the method
+RemoveNthFromEnd remover = new RemoveNthFromEnd();
+int n = 2;
+
+Console.WriteLine("Original Linked List:");
+LinkedListUtils.PrintLinkedList(head);
+
+// Remove the nth node from the end
+head = remover.RemovingNthFromEnd(head, n);
+
+Console.WriteLine($"\nLinked List after removing {n}th node from the end:");
+LinkedListUtils.PrintLinkedList(head);
